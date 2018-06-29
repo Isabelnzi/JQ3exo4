@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" />
+    <title>Exercice4</title>
+  </head>
+  <body>
+    <div id="rectangle"></div>
+    <button type="button" id="dimension">height</button>
+    <button type="button" id="color">Color</button>
+    <button type="button" id="initialColor">InitialColor</button>
+    <button type="button" id="Disapear">Hide</button>
+    <button type="button" id="see">Show</button>
+<script src="jquery-3.2.1.js"></script>
+<script>
+   //changer la taille du rectangle,si il change de taille remettre la hauteur a 10px
+         $('#dimension').click(function(){
+         if ($('#rectangle').height() < 100 ){
+         $('#rectangle').css('height', $('#rectangle').height()+10+"px");
+       } else {
+         $('#rectangle').css('height','10px');
+       }
+     });
+   //modification de la couleur du rectangle
+  $('#color').click(function(){
+  $('#rectangle').css('background','green');
+  });
+  //remettre la couleur initiale du rectangle
+  $('#initialColor').click(function(){
+    $('#rectangle').css('background','')
+  });
+  //faire disparaître le rectangle
+  $('#Disapear').click(function(){
+  $('#rectangle').hide();
+  });
+  //faire apparaître le rectangle
+  $('#see').click(function(){
+    $('#rectangle').show();
+  });
+</script>
+  </body>
+</html>
